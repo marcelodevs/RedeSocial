@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/icon/instagram.png" type="image/x-icon">
+    <title>Rede Social</title>
+</head>
+<body>
+    <div class="cell">
+        <div class="notifications-bar">
+            <span class="data-hours"></span>
+        </div>  
+        <div class="functions">
+            <ul class="menu-bar">
+                <li class="menu-item"><img src="assets/icon/botao-voltar.png" alt=""></li>
+                <li class="menu-item"><img src="assets/icon/botao-home.png" alt=""></li>
+            </ul>
+            <span class="home"></span>
+        </div>
+        <div class="aplications">
+            <div class="login">
+                <h3>Faça o login agora...</h3>
+                <form action="assets/php/login.php" class="form-login">
+                    <input type="email" name="email" class="inputGroup" placeholder="E-mail">
+                    <input type="password" name="senha" class="inputGroup" placeholder="Senha">
+                    <button type="submit">Confirmar</button>
+                    <p>Não fez cadastro ainda? <span class="regis">Faça agora!</span></p>
+                </form>
+                <form action="assets/php/registrar.php" class="form-regis">
+                    <input type="text" name="name" class="inputGroup" placeholder="Seu nome">
+                    <input type="email" name="email" class="inputGroup" placeholder="E-mail">
+                    <input type="password" name="senha" class="inputGroup" placeholder="Senha">
+                    <button type="submit">Confirmar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

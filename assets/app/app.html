@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icon/instagram.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/app.css">
+    <title>Rede Social</title>
+</head>
+<body>
+    <div class="cell">
+        <div class="notifications-bar">
+            <span class="data-hours"></span>
+        </div>
+        <div class="functions">
+            <ul class="menu-bar">
+                <li class="menu-item"><img src="../icon/botao-voltar.png" alt=""></li>
+                <li class="menu-item"><img src="../icon/botao-home.png" alt=""></li>
+            </ul>
+            <span class="home"></span>
+        </div>
+        <div class="applications">
+            <div class="overlay"></div>
+            <img src="../icon/instagram.png" class="img-app insta" onclick="openApp(this)">
+            <img src="../icon/youtube.png" class="img-app yt" onclick="openApp(this)">
+        </div>
+        <div class="controls">
+            <button class="off"></button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
