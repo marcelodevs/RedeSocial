@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../icon/instagram.png" type="image/x-icon">
     <link rel="stylesheet" href="../../css/insta/home.css">
+    <link rel="stylesheet" href="../../css/insta/chat.css">
     <title>Instagram</title>
 </head>
 
@@ -22,45 +23,91 @@
             </div>
         </div>
         <div class="applications">
-            <header>
-                <div class="row-1">
-                    <h4>Nome</h4>
-                    <span>↗️</span>
-                </div>
-                <div class="storys">
-                    <img src="../../icon/youtube.png" class="img-app">
-                </div>
-                <div class="story-amply">
-                    <img src="" class="story-amply-img">
-                </div>
-            </header>
-            <main>
-                <section class="publi">
-                    <div class="head">
+            <div class="container">
+                <header>
+                    <div class="row-1">
+                        <h4>Nome</h4>
+                        <span><abbr title="Conversas">↗️</abbr></span>
+                    </div>
+                    <div class="storys">
                         <img src="../../icon/youtube.png" class="img-app">
+                    </div>
+                    <div class="story-amply">
+                        <img src="" class="story-amply-img">
+                    </div>
+                </header>
+                <main>
+                    <section class="publi">
+                        <div class="head">
+                            <img src="../../icon/youtube.png" class="img-app">
+                            <span>Nome</span>
+                        </div>
+                        <img src="../../../../Projeto Hellen/gallery/g7.jpg" alt="publicação em si" class="img-publi">
+                        <div class="interations">
+                            <img src="../../icon/heart.png" class="like" onclick="handleLikeClick(this)">
+                            <img src="../../icon/chat-bubble.png" class="comment-btn">
+                            <img src="../../icon/send.png">
+                        </div>
+                        <span>legenda</span>
+                        <span>qnt comentarios</span>
+                        <span>time</span>
+                    </section>
+                    <section class="comments">
+                        if (existe comentarios) {
+                        <img src="../../icon/youtube.png" class="img-app" alt="foto">
                         <span>Nome</span>
-                    </div>
-                    <img src="../../../../Projeto Hellen/gallery/g10.jpg" alt="publicação em si" class="img-publi">
-                    <div class="interations">
-                        <img src="../../icon/heart.png" class="like" onclick="handleLikeClick(this)">
-                        <img src="../../icon/chat-bubble.png">
-                        <img src="../../icon/send.png">
-                    </div>
-                    <span>legenda</span>
-                    <span>qnt comentarios</span>
-                    <span>time</span>
-                </section>
-            </main>
+                        <span>comentario em si</span>
+                        } else {
+                        <h3>Nenhum comentario ainda</h3>
+                        <span>Inicie uma conversa</span>
+                        }
+                    </section>
+                </main>
+            </div>
+
             <section class="chat">
-                <input type="search" placeholder="Pesquisar">
-                <div class="chat-p">
+                <section class="infor-user-back">
+                    <img src="../../icon/botao-voltar.png" alt="">
+                    <span>Nome</span>
+                </section>
+                <center>
+                    <input type="search" placeholder="Pesquisar conversa">
+                </center>
+                <section class="chat-p">
                     <div class="infor-chat">
                         <img src="../../icon/youtube.png" class="img-app">
                         <span>nome</span>
                         <span>mensagem</span>
                     </div>
+                </section>
+            </section>
+
+            <section class="chat-show">
+                <div class="head-chat">
+                    <img src="../../icon/botao-voltar.png">
+                    <img src="../../icon/youtube.png" class="img-app">
+                    <span>Nome</span>
+                </div>
+                <div class="main-chat">
+                    <span class="date-chat"></span>
+                    <div class="msg">
+                        <div class="msg-friend">bbbbbbbbbbbbbbbbbbbbbb</div>
+                        <br>
+                        <div class="msg-you">aaaaaaaaaaaaaaaaaaaaaa</div>
+                    </div>
+                </div>
+                <div class="footer-chat">
+                    <form id="send">
+                        <input type="text" placeholder="Mensagem..." class="message">
+                    </form>
+                    <span class="trailing-icon">
+                        <img src="../../icon/microphone-black-shape.png">
+                        <img src="../../icon/image.png" class="file">
+                    </span>
+                    <input type="hidden" id="hiddenInput" accept=".png, .jpeg, .jpg">
                 </div>
             </section>
+
             <footer>
                 <a href="#" class="casa"><img src="../../icon/home.png"></a>
                 <a href="search.html" class="search"><img src="../../icon/search.png" alt=""></a>
@@ -69,7 +116,9 @@
             </footer>
         </div>
     </div>
+    <script src="../../js/jQuery/jquery-3.7.0.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../js/insta/home.js"></script>
 </body>
 

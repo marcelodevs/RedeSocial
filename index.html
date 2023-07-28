@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
     <link rel="shortcut icon" href="assets/icon/instagram.png" type="image/x-icon">
     <title>Rede Social</title>
 </head>
+
 <body>
     <div class="cell">
         <div class="notifications-bar">
             <span class="data-hours"></span>
-        </div>  
+            <span class="bar"></span>
+        </div>
         <div class="functions">
             <ul class="menu-bar">
                 <li class="menu-item"><img src="assets/icon/botao-voltar.png" alt=""></li>
@@ -20,23 +23,57 @@
             <span class="home"></span>
         </div>
         <div class="aplications">
-            <div class="login">
-                <h3>Faça o login agora...</h3>
-                <form action="assets/php/login.php" class="form-login">
-                    <input type="email" name="email" class="inputGroup" placeholder="E-mail">
-                    <input type="password" name="senha" class="inputGroup" placeholder="Senha">
-                    <button type="submit">Confirmar</button>
-                    <p>Não fez cadastro ainda? <span class="regis">Faça agora!</span></p>
+            <div class="insta">
+                <form action="assets/php/crud-user/login.php" class="login-form">
+                    <h2>Instagram</h2>
+                    <input type="text" placeholder="E-mail ou nome de usuário" required>
+                    <input type="password" placeholder="Senha" id="senha" required>
+                    <img src="assets/icon/view-hidden.png" class="show-pass" id="olho" data-show-pass="false">
+                    <input type="submit" value="Entrar">
+                    <div class="cadas">
+                        <p>Não tem uma conta? <strong>Cadastre-se</strong></p>
+                    </div>
                 </form>
-                <form action="assets/php/registrar.php" class="form-regis">
-                    <input type="text" name="name" class="inputGroup" placeholder="Seu nome">
-                    <input type="email" name="email" class="inputGroup" placeholder="E-mail">
-                    <input type="password" name="senha" class="inputGroup" placeholder="Senha">
-                    <button type="submit">Confirmar</button>
+
+                <form action="assets/php/crud-user/inserir.phpk" class="cadas-form">
+                    <section class="name-user active">
+                        <h3>Escolha um nome de usuário</h3>
+                        <p>Você pode alterar o seu nome quando quiser</p>
+                        <br>
+                        <input type="text" placeholder="Nome de usuário" id="username" onkeydown="return preventShift(event)" required>
+                        <br><br>
+                        <button class="next-btn">Avançar</button>
+                    </section>
+                    <section class="password-user">
+                        <h3>Crie uma senha</h3>
+                        <p>Por motivos de segurança, sua senha precisa ter 6 caracteres ou mais.</p>
+                        <br>
+                        <input type="password" placeholder="Senha" pattern=".{6,}" title="A senha deve conter, no mínimo, 6 caracteres" name="password" required>
+                        <br><br>
+                        <button class="prev-btn">Voltar</button>
+                        <button class="next-btn">Avançar</button>
+                    </section>
+                    <section class="email-user">
+                        <h3>Adicionar e-mail</h3>
+                        <p>Você pode alterar o seu e-mail quando quiser</p>
+                        <br>
+                        <input type="text" placeholder="Endereço de email" required>
+                        <br><br>
+                        <button class="prev-btn">Voltar</button>
+                        <button class="next-btn">Avançar</button>
+                    </section>
+                    <section class="last-sect">
+                        <h4>Bem-vindo ao Instagram, <span class="nameuser"></span></h4>
+                        <br>
+                        <button class="prev-btn">Voltar</button>
+                        <button class="finish-btn" type="submit">Concluir o cadastro</button>
+                    </section>
                 </form>
             </div>
         </div>
     </div>
+    <script src="assets/js/jQuery/jquery-3.7.0.min.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
+
 </html>
